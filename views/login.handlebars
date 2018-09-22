@@ -1,0 +1,95 @@
+
+  <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6">
+      <div id="gregsHeader">
+        <br/>
+        <br/>
+        <h1 id="gregsTitle" style="font-family: 'Pacifico', cursive; font-size:130px; color: white; text-align: center">Gregslist</h1>
+        <br/>
+        <br/>
+        <p id="sub">-- the most exclusive marketplace in the galaxy --</p>
+        
+        <div class="row">
+          <div class="col-md-12 text-center"> 
+      <input id="refresh1" type="button" class="btn btn-primary" style="" value="Login">
+      </div>
+      </div>
+      
+      <br/>
+      </div>
+    </div>
+    </div>
+    
+
+    
+
+{{!-- New Modal on page load --}}
+<script type="text/javascript">
+
+    $("#refresh1").on("click", function() {
+      $('#myModal').modal('show');
+    })
+</script>
+<div class="col-md-12">
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>Login</h3>
+        {{!-- <span data-toggle="collapse" href="myModal" class="close" title="Close Modal">&times;</span> --}}
+        <a href="#regi" data-toggle="collapse" class="float-right">New user?</a>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+        <form class="modal-content animate" role="form" autocomplete="off" id="loginForm" method="POST">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp" placeholder="Enter email">
+            <div class="invalid-feedback">You forgot your email</div>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="userpassword" placeholder="Password">
+            <div class="invalid-feedback">Forgot to enter your password</div>
+            <div class="danger" style="color: red"></div>
+          </div>
+              <div class="form py-4">
+                <button id="loginexistinguser" class="btn btn-primary">LOG INTO HOME</button>
+                <br/>
+                <br/>
+                <button id="loginexistingusertoposts" class="btn btn-success">LOG INTO MY POSTS</button>
+                <br/>
+                <br/>
+                <button class="btn btn-outline-secondary btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+              </div>
+        </form>
+        </div>
+        <br/>
+        <div class="col-md-6">
+          <div class="collapse" id="regi">
+          <form id="loginForm" class="modal-content animate" method="POST">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">New Users Email</label>
+        <input type="email" class="form-control" id="newUsername" aria-describedby="emailHelp" placeholder="Enter your email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="thePassword" placeholder="New Password">
+      </div>
+      <button id="createUser" class="btn btn-primary">SUBMIT</button>
+    </form>
+  </form>
+  </div>
+        </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
